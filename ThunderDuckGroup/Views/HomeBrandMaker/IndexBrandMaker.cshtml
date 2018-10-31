@@ -1,0 +1,314 @@
+﻿@model IEnumerable<ThunderDuckGroup.Models.HomeMaster>
+@{
+    ViewBag.Title = "IndexBrandMaker";
+    Layout = "~/Views/Shared/ThunderDuckBrandMaker/_LayoutBrandMaker.cshtml";
+    int i = 0;
+}
+
+<!--ABOUT AREA-->
+<section class="about-area section-padding" id="about" style="background: url(../../Images/ThunderDuckGroup/imageHome/@Model.FirstOrDefault().sto.FirstOrDefault().Images">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>@Model.FirstOrDefault().sto.FirstOrDefault().Title</h2>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="about-content">
+                    <p>@Model.FirstOrDefault().sto.FirstOrDefault().Description </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="right-about-content">
+                    <p>@Model.FirstOrDefault().sto.FirstOrDefault().Description1</p>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="about-author-sign text-center">
+                    <img src="/Images/ThunderDuckGroup/imageHome/@Model.FirstOrDefault().sto.FirstOrDefault().Signature" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--ABOUT AREA END-->
+<!--SPEACIAL PROMOTIONS AREA-->
+<section class="promotions-area section-padding" id="promotion">
+    <div class="promotion-area-bg" data-stellar-background-ratio="0.6"></div>
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Bùng nổ Tour</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="menu-discount-offer col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                @foreach (var item in Model.FirstOrDefault().tou)
+                {
+                    <div class="single-promotions">
+                        <div class="promotions-img">
+                            <img src="/Images/ThunderDuckGroup/imageHome/@item.Images" alt="">
+                        </div>
+                        <div class="promotions-details">
+                            <h3>@item.Title</h3>
+                            <p>@item.Description</p>
+                            <a href="/homebrandmaker/tourdetail/@item.id" class="read-more">@item.Price/@item.Amount</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!--SPEACIAL PROMOTIONS AREA END-->
+<!--MENUS AREA-->
+<section class="menus-area section-padding" id="menu">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Sự kiện</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="food-menu-list-menu">
+
+                    <ul>
+                        @foreach (var item in Model.FirstOrDefault().evetype)
+                        {
+                            if (i == 0)
+                            {
+                                <li class="filter active" data-filter="@item.Filter">@item.Type</li>
+                            }
+                            else
+                            {
+                                <li class="filter" data-filter="@item.Filter">@item.Type</li>
+                            }
+
+                            @*<li class="filter" data-filter=".east">Miền Đông</li>
+            <li class="filter" data-filter=".west">Miền Tây</li>
+
+            <li class="filter" data-filter=".central">Miền Trung</li>
+            <li class="filter" data-filter=".foreign">Nước Ngoài</li>*@
+                        }
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="row food-menu-list">
+            @foreach (var item in Model.FirstOrDefault().eve)
+            {
+                if (item.TypeId == 1)
+                {
+                    <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast all" data-filter="@item.id">
+                        <div class="single-menu-details">
+                            <div class="food-menu-img"><img src="/Images/ThunderDuckGroup/imageHome/@item.Images" alt="" value="@item.id"></div>
+                            <div class="food-menu-details">
+                                <h3>
+                                    <a href="/homebrandmaker/eventdetail/@item.id">
+                                        @item.Title
+                                    </a>
+                                </h3>
+                                <h3>
+                                    <span class="menu-price">@item.Price - @item.Amount</span>
+                                </h3><br>
+                                <p class="menu-speacification">@item.Description</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (item.TypeId == 2)
+                {
+                    <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast east" data-filter="@item.id">
+                        <div class="single-menu-details">
+                            <div class="food-menu-img"><img src="/Images/ThunderDuckGroup/imageHome/@item.Images" alt="" value="@item.id"></div>
+                            <div class="food-menu-details">
+                                <h3>
+                                    <a href="/homebrandmaker/eventdetail/@item.id">
+                                        @item.Title
+                                    </a>
+                                </h3>
+
+                                <h3>
+                                    <span class="menu-price">@item.Price - @item.Amount</span>
+                                </h3><br>
+                                <p class="menu-speacification">@item.Description</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (item.TypeId == 3)
+                {
+                    <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast west" data-filter="@item.id">
+                        <div class="single-menu-details">
+                            <div class="food-menu-img"><img src="/Images/ThunderDuckGroup/imageHome/@item.Images" alt="" value="@item.id"></div>
+                            <div class="food-menu-details">
+                                <h3>
+                                    <a href="/homebrandmaker/eventdetail/@item.id">
+                                        @item.Title
+                                    </a>
+                                </h3>
+
+                                <h3>
+                                    <span class="menu-price">@item.Price - @item.Amount</span>
+                                </h3><br>
+                                <p class="menu-speacification">@item.Description</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                if (item.TypeId == 4)
+                {
+                    <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast central" data-filter="@item.id">
+                        <div class="single-menu-details">
+                            <div class="food-menu-img"><img src="/Images/ThunderDuckGroup/imageHome/@item.Images" alt="" value="@item.id"></div>
+                            <div class="food-menu-details">
+                                <h3>
+                                    <a href="/homebrandmaker/eventdetail/@item.id">
+                                        @item.Title
+                                    </a>
+                                </h3>
+
+                                <h3>
+                                    <span class="menu-price">@item.Price - @item.Amount</span>
+                                </h3><br>
+                                <p class="menu-speacification">@item.Description</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                if (item.TypeId == 5)
+                {
+                    <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast foreign" data-filter="@item.id">
+                        <div class="single-menu-details">
+                            <div class="food-menu-img"><img src="/Images/ThunderDuckGroup/imageHome/@item.Images" alt="" value="@item.id"></div>
+                            <div class="food-menu-details">
+                                <h3>
+                                    <a href="/homebrandmaker/eventdetail/@item.id">
+                                        @item.Title
+                                    </a>
+                                </h3>
+
+                                <h3>
+                                    <span class="menu-price">@item.Price - @item.Amount</span>
+                                </h3><br>
+                                <p class="menu-speacification">@item.Description</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+<!--MENUS AREA END-->
+<!--TEAM AREA-->
+<section class="team-area section-padding" id="team">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Thành Viên</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 team-slider">
+                @foreach (var item in Model.FirstOrDefault().mem)
+                {
+                    <div class="single-team-member text-center">
+                        <div class="team-member-img ">
+                            <img src="/Images/ThunderDuckGroup/imageHome/@item.Images" alt="">
+                            <div class="member-social-bookmark">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member-details">
+                            <h3><a href="/homebrandmaker/profiledetail/@item.id">@item.Title</a></h3>
+                            <p>@item.Subtitle</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!--TEAM AREA END-->
+<!--BLOG AREA-->
+<section class="blog-area section-padding" id="blog">
+    <div class="blog-area-bg" data-stellar-background-ratio="0.6"></div>
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Tin tức</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row post-slider">
+            @foreach (var item in Model.FirstOrDefault().newss)
+            {
+                <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                    <div class="single-post text-center">
+                        <div class="blog-post-img ">
+                            <img src="~/Images/ThunderDuckGroup/imageNew/@item.Images" alt="">
+                        </div>
+                        <div class="post-details">
+                            <h3><a href="/homebrandmaker/newdetail/@item.id">@item.Title</a></h3>
+                            <p>@item.Description</p>
+
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!--BLOG AREA END-->
+<!--INSTAGRAM GALLERY FEED-->
+<section class="gallery-area section-padding" id="gallery">
+    <div class="container wow fadeIn">
+        <div class="row">
+
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Hình ảnh</h2>
+                </div>
+                @foreach (var item in Model.FirstOrDefault().img)
+                {
+                    <div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">
+                        <div class="container-cosmetic">
+                            <div class="image-frame">
+                                <img src="/Images/ThunderDuckGroup/imageHome/@item.images1" alt="Avatar" class="image">
+                                <div class="overlay">
+                                    <div class="text">@item.Subtitle</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--INSTAGRAM GALLERY FEED END-->

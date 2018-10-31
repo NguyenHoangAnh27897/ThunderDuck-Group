@@ -1,0 +1,121 @@
+﻿@model ThunderDuckGroup.Models.Td_Construction_Member
+@{
+    ViewBag.Title = "proFile";
+    Layout = "~/Views/Shared/ThunderDuckConstruction/LayoutConstruction.cshtml";
+}
+
+
+<!--BLOG AREA-->
+<section class="blog-page blog-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+
+                <div class="single-blog-page single-blog text-justify wow fadeIn">
+                    <div>
+                        <img src="/Images/ThunderDuckGroup/imagemembers/@Model.Images"  style="width: 25%; height: auto">
+                    </div>
+                    <div class="blog-details">
+                        <div class="title-and-meta">
+                            <h3><a href="#">@Model.Title</a></h3>
+                            <h5><a href="#">@Model.Subtitle</a></h5>
+                            <p class="post-meta">By <a href="#">Alexander Pirlo</a> | <a href="#">July 28, 2017</a></p>
+                        </div>
+                        <div class="blog-content">
+                            <p>@Model.Introduction</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tags-and-social-bar wow fadeIn">
+                    <div class="tags">
+                        <h3>Thẻ:</h3>
+                        <ul>
+                            <li><a href="#">Singapore</a></li>
+                            <li><a href="#">Malaysia</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="single-post-social-bar text-right">
+                        <h3>SHERE:</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blog-comments wow fadeIn">
+
+
+
+                </div>
+
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                <div class="blog-sidebar">
+
+                    <div class="single-sidebar-widget catagories-widget wow fadeIn">
+                        <h4>Events</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Nước ngoài</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Miền Đông</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Miền Tây</a></li>
+
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Miền Trung</a></li>
+                        </ul>
+                    </div>
+                    <div class="single-sidebar-widget social-widget wow fadeIn">
+                        <h4>Kết nối với chúng tôi</h4>
+                        <ul>
+                            <li class="s_facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="s_twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="s_pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li class="s_instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="single-sidebar-widget post-widget wow fadeIn">
+                        <h4>Tin Tức</h4>
+                        <ul>
+
+                            <li class="s_post">
+                                <div class="post-tumb alignleft">
+                                    <a href="news1.html"><img src="~/Content/ThunderDuckConstruction/img/blog/thumb/blog1.jpg" alt=""></a>
+                                </div>
+                                <div class="post-title-and-date">
+                                    <h4><a href="news1.html">Can thiệp quyết định mua hàng, lời nào cho Marketing?</a></h4>
+
+                                </div>
+                            </li>
+
+                            <li class="s_post">
+                                <div class="post-tumb alignleft">
+                                    <a href="news2.html"><img src="~/Content/ThunderDuckConstruction/img/blog/thumb/2.jpg" alt=""></a>
+                                </div>
+                                <div class="post-title-and-date">
+                                    <h4><a href="news2.html">Trải nghiệm mô hình du lịch mới tại Sa Pa</a></h4>
+
+                                </div>
+                            </li>
+
+                            <li class="s_post">
+                                <div class="post-tumb alignleft">
+                                    <a href="news3.html"><img src="~/Content/ThunderDuckConstruction/img/blog/thumb/blog3.jpg" alt=""></a>
+                                </div>
+                                <div class="post-title-and-date">
+                                    <h4><a href="news3.html">Lên Đà Lạt một ngày làm nông dân thu hoạch dâu tây</a></h4>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--BLOG AREA END-->

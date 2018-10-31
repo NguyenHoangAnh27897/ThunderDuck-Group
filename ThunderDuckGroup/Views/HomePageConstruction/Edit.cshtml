@@ -1,0 +1,174 @@
+﻿@model IQueryable<ThunderDuckGroup.Models.Td_Construction_Slider>
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/ThunderDuckConstruction/_LayoutWebmaster.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmasterconstruction/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Chỉnh sửa trang chủ</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Chỉnh sửa Slider</h4>
+                            </div>
+                        </div>
+
+                        <div class="section-body">
+                            <form action="/homepageconstruction/edit" method="post" enctype="multipart/form-data">
+
+                                @if (Model.FirstOrDefault().Logo != null)
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Logo (VUI LÒNG CHỌN HÌNH CÓ KÍCH CỠ 336x280 TRỞ LÊN)</label>
+                                        <br />
+                                        <input type="file" name="logo" accept="image/*" />
+                                        <br />
+                                        <img src="~/Images/ThunderDuckgroup/imageHome/@Model.FirstOrDefault().Logo" style="center" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Logo (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 336x280 HOẶC LỚN HƠN) </label>
+                                        <br />
+                                        <input type="file" name="logo" accept="image/*" />
+                                    </div>
+                                }
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Email (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input maxlength="50" type="text" class="form-control" placeholder="" name="email" value="@Model.FirstOrDefault().Email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Phone (VUI LÒNG NHẬP DƯỚI 50 KÍ TỰ)</label>
+                                    <input maxlength="50" type="text" class="form-control" placeholder="" name="phone" value="@Model.FirstOrDefault().Phone">
+                                </div>
+                                @if (Model.FirstOrDefault().Images != null)
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh slide 1 (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1600x1066 HOẶC LỚN HƠN)</label>
+                                        <br />
+                                        <input type="file" name="Images" accept="image/*" />
+                                        <br />
+                                        <img src="~/Images/ThunderDuckgroup/imageHome/@Model.FirstOrDefault().Images" style="width:100%; margin-top: 10px" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh slide 1(VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 1600x1066 HOẶC LỚN HƠN)</label>
+                                        <br />
+                                        <input type="file" name="Images" accept="image/*" />
+                                    </div>
+                                }
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Tiêu đề 1 (VUI LÒNG NHẬP DƯỚI 150 KÍ TỰ)</label>
+                                    <input maxlength="150" type="text" class="form-control" placeholder="" name="title" value="@Model.FirstOrDefault().Title">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Nội dung 1 (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" class="form-control" placeholder="" name="subtitle" value="@Model.FirstOrDefault().Subtitle">
+                                </div>
+
+                                @if (Model.FirstOrDefault().Images1 != null)
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh slide 2 (VUI LÒNG CHỌN HÌNH CÓ KÍCH CỠ 1600x1066 TRỞ LÊN)</label>
+                                        <br />
+                                        <input type="file" name="Images1" accept="image/*" />
+                                        <br />
+                                        <img src="~/Images/ThunderDuckgroup/imageHome/@Model.FirstOrDefault().Images1" style="width:100%; margin-top: 10px" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh slide 2(VUI LÒNG CHỌN HÌNH CÓ KÍCH CỠ 1600x1066 TRỞ LÊN)</label>
+                                        <br />
+                                        <input type="file" name="Images1" accept="image/*" />
+                                    </div>
+                                }
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Tiêu đề 2 (VUI LÒNG NHẬP DƯỚI 150 KÍ TỰ)</label>
+                                    <input maxlength="150" type="text" class="form-control" placeholder="" name="title1" value="@Model.FirstOrDefault().Title1">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Nội dung 2 (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" class="form-control" placeholder="" name="subtitle1" value="@Model.FirstOrDefault().Subtitle1">
+                                </div>
+
+                                @if (Model.FirstOrDefault().Images2 != null)
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh slide 3 (VUI LÒNG CHỌN HÌNH CÓ KÍCH CỠ 1600x1066 TRỞ LÊN)</label>
+                                        <br />
+                                        <input type="file" name="Images2" accept="image/*" />
+                                        <br />
+                                        <img src="~/Images/ThunderDuckgroup/imageHome/@Model.FirstOrDefault().Images2" style="width:100%; margin-top: 10px" />
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label for="exampleFormControlFile1">Hình ảnh slide 3(VUI LÒNG CHỌN HÌNH CÓ KÍCH CỠ 1600x1066 TRỞ LÊN)</label>
+                                        <br />
+                                        <input type="file" name="Images2" accept="image/*" />
+                                    </div>
+                                }
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Tiêu đề 3 (VUI LÒNG NHẬP DƯỚI 150 KÍ TỰ)</label>
+                                    <input maxlength="150" type="text" class="form-control" placeholder="" name="title2" value="@Model.FirstOrDefault().Title2">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput4">Nội dung 3 (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" class="form-control" placeholder="" name="subtitle2" value="@Model.FirstOrDefault().Subtitle2">
+                                </div>
+                                <input class="btn btn-primaryt" type="submit" value="Lưu" />
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("input[type='submit']").click(function () {
+            var $fileUpload = $("input[type='file']");
+            if (parseInt($fileUpload.get(0).files.length) > 3) {
+                alert("Bạn chỉ được Upload tối đa 8 tấm hình");
+            }
+        });
+    })
+</script>
+
+
+

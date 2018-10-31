@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ThunderDuckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Td_BrandMaker_AreaType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Filter" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Hotline" Type="nvarchar(max)" />
+    <Property Name="Headaddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="OfficeAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="Phone1" Type="nvarchar(max)" />
+    <Property Name="Email1" Type="nvarchar(max)" />
+    <Property Name="Email2" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_Events">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="Price" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_Images">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="images1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Subtitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_Members">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="Subtitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_News">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_Slider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="Video" Type="nvarchar" MaxLength="200" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_Story">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Signature" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Td_BrandMaker_Tours">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Price" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Td_Construction_Construction">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="Avatar" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Td_Construction_Contact">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HeadAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="OfficeAddress" Type="nvarchar" MaxLength="300" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Email1" Type="nvarchar(max)" />
+    <Property Name="Email2" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Phone1" Type="nvarchar(max)" />
+    <Property Name="Hotline" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Td_Construction_Images">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Td_Construction_Member">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Subtitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="Introduction" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Td_Construction_New">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="250" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Td_Construction_Slider">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="150" />
+    <Property Name="Subtitle" Type="nvarchar" MaxLength="200" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Subtitle1" Type="nvarchar" MaxLength="200" />
+    <Property Name="Title2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Subtitle2" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="Td_Constrution_Story">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Signature" Type="nvarchar" MaxLength="50" />
+    <Property Name="Images" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description1" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityContainer Name="ThunderDuckModelStoreContainer">
+    <EntitySet Name="Td_BrandMaker_AreaType" EntityType="Self.Td_BrandMaker_AreaType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_Contact" EntityType="Self.Td_BrandMaker_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_Events" EntityType="Self.Td_BrandMaker_Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_Images" EntityType="Self.Td_BrandMaker_Images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_Members" EntityType="Self.Td_BrandMaker_Members" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_News" EntityType="Self.Td_BrandMaker_News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_Slider" EntityType="Self.Td_BrandMaker_Slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_Story" EntityType="Self.Td_BrandMaker_Story" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_BrandMaker_Tours" EntityType="Self.Td_BrandMaker_Tours" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Construction_Construction" EntityType="Self.Td_Construction_Construction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Construction_Contact" EntityType="Self.Td_Construction_Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Construction_Images" EntityType="Self.Td_Construction_Images" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Construction_Member" EntityType="Self.Td_Construction_Member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Construction_New" EntityType="Self.Td_Construction_New" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Construction_Slider" EntityType="Self.Td_Construction_Slider" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Constrution_Story" EntityType="Self.Td_Constrution_Story" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

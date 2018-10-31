@@ -1,0 +1,224 @@
+﻿@model ThunderDuckGroup.Models.Td_BrandMaker_Tours
+@{
+    ViewBag.Title = "blogDetail";
+    Layout = "~/Views/Shared/ThunderDuckBrandMaker/_LayoutBrandMaker.cshtml";
+}
+
+<!--START TOP AREA-->
+@*<header class="top-area single-page single-blog-page" id="home">
+    <div class="page-barner-bg" data-stellar-background-ratio="0.6"></div>
+         <div class="header-top-area">
+             <div class="top-bar">
+                 <div class="container">
+                     <div class="row">
+                         <div class="col-md-7 col-lg-8 col-sm-8">
+                             <div class="call-to-action">
+                                 <p><i class="fa fa-envelope-o"></i>Email: <a href="mailto:info@thunderduck.com.vn">info@thunderduck.com.vn</a></p>
+                                 <p><i class="fa fa-phone"></i>Điện Thoại: <a href="tel:+840902417744">+84 961 404 441</a></p>
+                             </div>
+                         </div>
+                         <div class="col-md-5 col-lg-4 col-sm-4">
+
+                             <div class="top-social-bookmark">
+                                 <ul>
+                                     <li><a href="https://www.facebook.com/thunderduck.brandsmaker.5"><i class="fa fa-facebook"></i></a></li>
+                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                     <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                     <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                 </ul>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+             <!--MAINMENU AREA-->
+             <div class="mainmenu-area" id="mainmenu-area">
+                 <div class="mainmenu-area-bg"></div>
+                 <nav class="navbar">
+                     <div class="container">
+                         <div class="navbar-header">
+                             <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+                                 <span class="sr-only">Toggle navigation</span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                             </button>
+                             <a href="../index.html" class="navbar-brand"><img src="img/logo-main3.png" alt="logo"></a>
+                             <a href="../index.html" class="navbar-brand white"><img src="img/logo-main3.png" alt="logo"></a>
+                         </div>
+                         <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                             <!-- <div class="search-form-area">
+                                 <div class="search-form-overlay"></div>
+                                 <a class="search-form-trigger" href="#search-form">Search<span></span></a>
+                                 <div id="search-form" class="search-form">
+                                     <form>
+                                         <input type="search" placeholder="Search...">
+                                     </form>
+                                 </div>
+                             </div> -->
+                             <ul id="nav" class="nav navbar-nav">
+                                 <li class="active"><a href="index.html#home">Trang chủ</a> </li>
+                                 <li><a href="index.html#about">Giới thiệu</a></li>
+                                 <li><a href="index.html#promotion">Sự kiện</a></li>
+                                 <!-- <li><a href="#reservation-button">Xây Dựng</a></li>
+                                 <li><a href="#comestic">Mỹ Phẩm</a></li> -->
+                                 <li><a href="index.html#team">Thành Viên</a></li>
+                                 <li><a href="index.html#blog">Tin tức</a></li>
+                                 <li><a href="index.html#gallery">hình ảnh</a></li>
+                                 <li><a href="index.html#contact">Liên hệ</a></li>
+                             </ul>
+                         </div>
+                     </div>
+                 </nav>
+             </div>
+             <!--END MAINMENU AREA END-->
+         </div>*@
+
+@*<!--PAGE BARNER AREA-->
+            <div class="page-barner-area">
+                <div class="container wow fadeIn">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <div class="barner-text">
+                                <h1>Singapore - <span>Malaysia</span></h1>
+                                <ul class="page-location">
+                                    <li><a href="index.html">Thunder Duck Brand Maker</a></li>
+                                    <li><i class="fa fa-angle-right"></i></li>
+                                    <li class="active"><a href="single-blog.html">Singapore - Malaysia</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--PAGE BARNER AREA END-->
+
+    </header>*@
+<!--END TOP AREA-->
+<!--BLOG AREA-->
+<section class="blog-page blog-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                <div class="single-blog-page single-blog text-justify wow fadeIn">
+                    <div>
+                        <img src="/Images/ThunderDuckGroup/imageHome/@Model.Images" alt="">
+                    </div>
+                    <div class="blog-details">
+                        <div class="title-and-meta">
+                            <h3><a href="#">@Model.Title</a></h3>
+                            <p class="post-meta">Chi phí: @Model.Price - @Model.Amount</a></p>
+                        </div>
+                        <div class="blog-content">
+                            <p>@Model.Description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tags-and-social-bar wow fadeIn">
+                    <div class="tags">
+                        <h3>Thẻ:</h3>
+                        <ul>
+                            <li><a href="#">Singapore</a></li>
+                            <li><a href="#">Malaysia</a></li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </div>
+                    <div class="single-post-social-bar text-right">
+                        <h3>SHERE:</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="blog-comments wow fadeIn">
+
+                    <div id="fb-root"></div>
+                    <script>
+                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0&appId=461027154341433&autoLogAppEvents=1';
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+
+                    @*<div class="fb-comments" data-href="http://thunderduck.com.vn" data-width="850 px" data-numposts="5"></div>*@
+
+                </div>
+
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+                <div class="blog-sidebar">
+                    <!-- <div class="single-sidebar-widget">
+                        <form action="#">
+                            <input type="search" name="search" id="search" placeholder="Search...">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div> -->
+                    <div class="single-sidebar-widget catagories-widget wow fadeIn">
+                        <h4>Events</h4>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Nước ngoài</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Miền Đông</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Miền Tây</a></li>
+                            <!-- <li><a href="#"><i class="fa fa-angle-right"></i>Miền Bắc</a></li> -->
+                            <li><a href="#"><i class="fa fa-angle-right"></i>Miền Trung</a></li>
+                        </ul>
+                    </div>
+                    <div class="single-sidebar-widget social-widget wow fadeIn">
+                        <h4>Kết nối với chúng tôi</h4>
+                        <ul>
+                            <li class="s_facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="s_twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="s_pinterest"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            <li class="s_instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="single-sidebar-widget post-widget wow fadeIn">
+                        <h4>Tin Tức</h4>
+                        <ul>
+
+                            <li class="s_post">
+                                <div class="post-tumb alignleft">
+                                    <a href="news1.html"><img src="~/Content/ThunderDuckBrandMaker/img/blog/thumb/blog1.jpg" alt=""></a>
+                                </div>
+                                <div class="post-title-and-date">
+                                    <h4><a href="news1.html">Can thiệp quyết định mua hàng, lời nào cho Marketing?</a></h4>
+                                    <!-- <p class="post-meta"><a href="#">Mar 25, 2017</a></p> -->
+                                </div>
+                            </li>
+
+                            <li class="s_post">
+                                <div class="post-tumb alignleft">
+                                    <a href="news2.html"><img src="~/Content/ThunderDuckBrandMaker/img/blog/thumb/blog2.jpg" alt=""></a>
+                                </div>
+                                <div class="post-title-and-date">
+                                    <h4><a href="news2.html">Trải nghiệm mô hình du lịch mới tại Sa Pa</a></h4>
+                                    <!-- <p class="post-meta"><a href="#">Jan 25, 2017</a></p> -->
+                                </div>
+                            </li>
+
+                            <li class="s_post">
+                                <div class="post-tumb alignleft">
+                                    <a href="news3.html"><img src="~/Content/ThunderDuckBrandMaker/img/blog/thumb/blog3.jpg" alt=""></a>
+                                </div>
+                                <div class="post-title-and-date">
+                                    <h4><a href="news3.html">Lên Đà Lạt một ngày làm nông dân thu hoạch dâu tây</a></h4>
+                                    <!-- <p class="post-meta"><a href="#">Dec 25, 2017</a></p> -->
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--BLOG AREA END-->

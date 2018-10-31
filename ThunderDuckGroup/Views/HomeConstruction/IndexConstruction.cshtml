@@ -1,0 +1,164 @@
+﻿@model IEnumerable<ThunderDuckGroup.Models.ConMaster>
+@{
+    ViewBag.Title = "IndexConstruction";
+    Layout = "~/Views/Shared/ThunderDuckConstruction/LayoutConstruction.cshtml";
+}
+
+
+<!--ABOUT AREA-->
+<section class="about-area section-padding" id="about" style="background: url(../../Images/ThunderDuckGroup/imageHome/@Model.FirstOrDefault().stor.FirstOrDefault().Images">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>@Model.FirstOrDefault().stor.FirstOrDefault().Title</h2>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="about-content">
+                    <p>@Model.FirstOrDefault().stor.FirstOrDefault().Description</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="right-about-content">
+                    <p>@Model.FirstOrDefault().stor.FirstOrDefault().Description1
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="about-author-sign text-center">
+                    <img src="/Images/ThunderDuckGroup/imageHome/@Model.FirstOrDefault().stor.FirstOrDefault().Signature" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--ABOUT AREA END-->
+<!--RESERVATION BUTTON AREA-->
+<section class="reservation-button-area section-padding" id="reservation-button">
+    <div class="reservation-button-area-bg" data-stellar-background-ratio="0.6"></div>
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+
+                <div class="area-title text-center">
+                    <h2>Xây Dựng</h2>
+                </div>
+                @foreach (var item in Model.FirstOrDefault().constr)
+                {
+                    <div class="container-left">
+                        <a href="/homeconstruction/consDetail/@item.id"><img src="/Images/ThunderDuckGroup/imageHome/@item.Avatar" alt="Avatar" class="image-left" style="height:300px"></a>
+                        <div class="overlay-left">
+                            <div class="text-left"> <a href="/homeconstruction/consDetail/@item.id">@item.Title</a></div>
+                        </div>
+                    </div>
+                }
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--RESERVATION BUTTON AREA END-->
+<!--TEAM AREA-->
+<section class="team-area section-padding" id="team">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Thành Viên</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 team-slider">
+                @foreach (var item in Model.FirstOrDefault().meme)
+                {
+                    <div class="single-team-member text-center">
+                        <div class="team-member-img ">
+                            <a href="/homeconstruction/profile/@item.id"><img src="/Images/ThunderDuckGroup/imageHome/@item.Images"></a>                            
+                            <div class="member-social-bookmark">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member-details">
+                            <h3><a href="/homeconstruction/profile/@item.id">@item.Title</a></h3>
+                            <p>@item.Subtitle</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!--TEAM AREA END-->
+<!--BLOG AREA-->
+<section class="blog-area section-padding" id="blog">
+    <div class="blog-area-bg" data-stellar-background-ratio="0.6"></div>
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Tin tức</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row post-slider">
+
+            @foreach (var item in Model.FirstOrDefault().news)
+            {
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12">
+                <div class="single-post text-center">
+                    <div class="blog-post-img ">
+                        <a href="/homeconstruction/blogDetail/@item.id"><img src="/Images/ThunderDuckGroup/imagenew/@item.Images" alt=""></a>
+                    </div>
+                    <div class="post-details">
+                        <h3><a href="/homeconstruction/blogDetail/@item.id">@item.Title</a></h3>
+                        <p>@item.Description</p>
+                    </div>
+                </div>
+            </div>
+                    }
+
+                
+
+            </div>
+    </div>
+</section>
+<!--BLOG AREA END-->
+<!--INSTAGRAM GALLERY FEED-->
+<section class="gallery-area section-padding" id="gallery">
+    <div class="container wow fadeIn">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <div class="area-title text-center">
+                    <h2>Hình Ảnh</h2>
+                </div>
+            </div>
+
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 team-slider">
+                @foreach (var item in Model.FirstOrDefault().ima)
+                {
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="container-cosmetic">
+                            <div class="image-frame">
+                                <img src="~/Images/ThunderDuckGroup/imageimg/@item.Images" alt="Avatar" class="image">
+                                @*<a title="@item.Title" class="gallery-lightbox" href="/Images/b.Deli/imageHome/@item.Images"><i class="fa fa-plus"></i> <img src="/Images/b.Deli/imageHome/@item.Images" alt=""></a>*@
+
+                                <div class="overlay">
+                                    <div class="text">@item.Title</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<!--INSTAGRAM GALLERY FEED END-->

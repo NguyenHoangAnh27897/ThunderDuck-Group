@@ -1,0 +1,136 @@
+﻿@model IEnumerable<ThunderDuckGroup.Models.HomeMaster>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link rel="shortcut icon" href="~/Content/favicon.png" type="image/x-icon">
+    <title>Thunder Duck Group</title>
+    <!-- BOOTSTRAP -->
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet">
+    <!-- FULLPAGE SCROLL -->
+    <!-- CUSTOM CSS  -->
+    <link rel="stylesheet" type="text/css" href="~/Content/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/media.css" />
+
+</head>
+<body>
+    <!--START LOADER -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left">
+            <div class="hi"></div>
+        </div>
+    </div>
+    <!--   END LOADER  -->
+    <!--   START MUSIC  -->
+    <div id="music-wrapper" class="active">
+        <div class="audio-control">
+            <div class="control-wrapper">
+                <p>Copyright © 2018 Thunder Duck Group</p>
+                <p>Trụ sở: Số 4, Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, Thành Phố Hồ Chí Minh</p>
+                <p>Văn phòng giao dịch: Số 88, Song Hành, Phường An Phú, Quận 2, Thành Phố Hồ Chí Minh</p>
+                <p>Email: admin@thunderduck.com.vn - jasmine.doan@thunderduck.com.vn - lucynguyen@thunderduck.com.vn</p>
+                <p>Điện Thoại: (+8428) 6650 7678 - +84 981 406 778</p>
+            </div>
+        </div>
+    </div>
+    <!--   END MUSIC  -->
+    <!-- START CONTENT -->
+    <div class="main" id="fullpage">
+        <!-- START HOME SECTION -->
+
+        <section class="l-screen home-section ">
+
+            <!-- START HOME CONTENT -->
+            <div id="container" class="wrapper">
+                <div id="background"></div>
+
+
+                <ul id="scene" class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25" data-scalar-y="15" data-mode="cursor">
+                    <li id="parallax-home" class="layer" data-depth="0.10">
+
+                    </li>
+                    <li>
+                        <div class="bg_pattern"></div>
+                    </li>
+                    <li class="layer" data-depth="0.20">
+                        <div class="home_title"><img src="~/Content/images/BLlogo.png" class="home-logo" alt="home-logo"></div>
+                    </li>
+                    <li class="layer" data-depth="0.20">
+                        <div class="brand-12">
+
+                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+
+                                <div class="container-brand">
+                                    <a href="/homebrandmaker/indexbrandmaker">
+                                        <img src="~/Content/images/2.png" alt="Avatar" class="image-brand">
+                                        <div class="overlay-brand">
+                                            <div class="text-brand">Thương hiệu - Sự kiện</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+
+                                <div class="container-brand">
+                                    <a href="/homeconstruction/indexconstruction">
+                                        <img src="~/Content/images/1.png" alt="Avatar" class="image-brand">
+                                        <div class="overlay-brand">
+                                            <div class="text-brand">Công trình</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-6">
+
+                                <div class="container-brand">
+                                    <a href="ThunderDuckCosmetic/index.html">
+                                        <img src="~/Content/images/3.png" alt="Avatar" class="image-brand">
+                                        <div class="overlay-brand">
+                                            <div class="text-brand">Mỹ Phẩm</div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </li>
+
+                </ul>
+
+
+
+
+                <!--END HOME CONTENT-->
+
+            </div>
+        </section>
+    </div>
+
+
+    <!-- END MAIN DIV -->
+
+    <script src="~/Content/js/jquery-3.2.1.min.js"></script>
+
+    <!-- CUSTOM JS -->
+    <script src="~/Content/js/contact.js"></script>
+    <script src="~/Content/js/custom.js"></script>
+
+</body>
+</html>

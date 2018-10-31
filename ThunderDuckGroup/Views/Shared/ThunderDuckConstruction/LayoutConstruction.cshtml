@@ -1,0 +1,245 @@
+﻿@using ThunderDuckGroup.Models
+@{
+    ThunderDuckEntities3 db = new ThunderDuckEntities3();
+    ConMaster home = new ConMaster();
+var sli = db.Td_Construction_Slider.Where(st => st.id == 1);
+    var con = db.Td_Construction_Contact.Where(st => st.id == 1);
+    home.slie = sli;
+    home.conta = con;
+    List<ConMaster> lst = new List<ConMaster>();
+    lst.Add(home);
+}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="vi">
+<!--<![endif]-->
+
+
+<head>
+    <!--====== USEFULL META ======-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thunder Duck Group" />
+    <meta name="keywords" content="Construction" />
+    <meta name="author" content="LNNK" />
+
+    <!--====== TITLE TAG ======-->
+    <title>Thunder Duck Group</title>
+
+    <!--====== FAVICON ICON =======-->
+    <link rel="shortcut icon" type="image/ico" href="~/Content/ThunderDuckConstruction/img/favicon.png" />
+
+    <!--====== STYLESHEETS ======-->
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/normalize.css">
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/animate.css">
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/pogo-slider.css">
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/datepicker.css">
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/timepicker.min.css">
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/Content/ThunderDuckConstruction/css/typed.css">
+    <link href="~/Content/ThunderDuckConstruction/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/ThunderDuckConstruction/css/font-awesome.min.css" rel="stylesheet">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+    <!--====== MAIN STYLESHEETS ======-->
+    <link href="~/Content/ThunderDuckConstruction/style.css" rel="stylesheet">
+    <link href="~/Content/ThunderDuckConstruction/css/responsive.css" rel="stylesheet">
+
+    <script src="~/Content/ThunderDuckConstruction/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <!--===== Language =====-->
+
+
+</head>
+
+<body class="style-classic">
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!--- PRELOADER -->
+    <div class="preeloader">
+        <div class="preloader-spinner"><i class="fa fa-connectdevelop"></i></div>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+
+    <!--START TOP AREA-->
+    <header class="top-area" id="home">
+        <div class="header-top-area">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-8 col-sm-8">
+                            <div class="call-to-action">
+                                <p><i class="fa fa-envelope-o"></i>Email: <a href="@lst.FirstOrDefault().slie.FirstOrDefault().Email">@lst.FirstOrDefault().slie.FirstOrDefault().Email</a></p>
+                                <p><i class="fa fa-phone"></i>Điện Thoại: <a href="@lst.FirstOrDefault().slie.FirstOrDefault().Phone">@lst.FirstOrDefault().slie.FirstOrDefault().Phone</a></p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-4 col-sm-4">
+                            <div class="top-social-bookmark">
+                                <ul>
+                                    <li><a href="https://www.facebook.com/thunderduck.brandsmaker.5"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                            <div id="google_translate_element"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--MAINMENU AREA-->
+            <div class="mainmenu-area" id="mainmenu-area">
+                <div class="mainmenu-area-bg"></div>
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button class="collapsed navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-scrollspy">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="../index.html" class="navbar-brand"><img src="~/Images/ThunderDuckGroup/imageHome/@lst.FirstOrDefault().slie.FirstOrDefault().Logo" alt="logo"></a>
+                            <a href="../index.html" class="navbar-brand white"><img src="~/Images/ThunderDuckGroup/imageHome/@lst.FirstOrDefault().slie.FirstOrDefault().Logo"></a>
+                        </div>
+                        <div class="collapse navbar-collapse bs-example-js-navbar-scrollspy">
+                            <ul id="nav" class="nav navbar-nav">
+                                <li class="active"><a href="#home">Trang chủ</a> </li>
+                                <li><a href="#about">Giới thiệu</a></li>
+                                <li><a href="#reservation-button">Xây Dựng</a></li>
+                                <li><a href="#team">Thành Viên</a></li>
+                                <li><a href="#blog">Tin tức</a></li>
+                                <li><a href="#gallery">hình ảnh</a></li>
+                                <li><a href="#contact">Liên hệ</a></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <!--END MAINMENU AREA END-->
+        </div>
+
+        <!--HHOME SLIDER AREA-->
+        <div class="slider-area">
+            <div class="pogoSlider">
+                <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background:url(../../../Content/ThunderDuckConstruction/img/slider/slide_1.jpg) no-repeat scroll 0 0 / cover;">
+
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">@lst.FirstOrDefault().slie.FirstOrDefault().Title</h2>
+                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">@lst.FirstOrDefault().slie.FirstOrDefault().Subtitle</h1>
+                </div>
+                <div class="pogoSlider-slide" data-transition="fade" style="background:url(../../../Content/ThunderDuckConstruction/img/slider/slide_2.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">@lst.FirstOrDefault().slie.FirstOrDefault().Title1</h2>
+                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">@lst.FirstOrDefault().slie.FirstOrDefault().Subtitle1</h1>
+                </div>
+                <div class="pogoSlider-slide" data-transition="fade" style="background:url(../../../Content/ThunderDuckConstruction/img/slider/slide_3.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">@lst.FirstOrDefault().slie.FirstOrDefault().Title2</h2>
+                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">@lst.FirstOrDefault().slie.FirstOrDefault().Subtitle2</h1>
+                </div>
+            </div>
+        </div>
+        <!--HOME SLIDER AREA END-->
+
+    </header>
+    <!--END TOP AREA-->
+    @RenderBody()
+    <!--FOOER AREA-->
+    <div class="footer-area" id="contact">
+        <div class="footer-area-bg" data-stellar-background-ratio="0.6"></div>
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="footer-top section-padding text-center">
+                        <div class="footer-logo">
+                            <a href="#"><img src="~/Content/ThunderDuckConstruction/img/logo-main3.png" alt=""></a>
+                        </div>
+                        <div class="footer-address">
+
+                            <p>Trụ sở: @lst.FirstOrDefault().conta.FirstOrDefault().HeadAddress</p>
+                            <p>Văn phòng giao dịch: @lst.FirstOrDefault().conta.FirstOrDefault().OfficeAddress</p>
+                            <p>Email: <a href="@lst.FirstOrDefault().conta.FirstOrDefault().Email">@lst.FirstOrDefault().conta.FirstOrDefault().Email</a> - <a href="@lst.FirstOrDefault().conta.FirstOrDefault().Email1">@lst.FirstOrDefault().conta.FirstOrDefault().Email1</a> - <a href="@lst.FirstOrDefault().conta.FirstOrDefault().Email2">@lst.FirstOrDefault().conta.FirstOrDefault().Email2</a> - </p>
+                            <p>Điện Thoại: <a href="@lst.FirstOrDefault().conta.FirstOrDefault().Phone">@lst.FirstOrDefault().conta.FirstOrDefault().Phone</a> - <a href="@lst.FirstOrDefault().conta.FirstOrDefault().Phone1">@lst.FirstOrDefault().conta.FirstOrDefault().Phone1</a></p>
+                            <p>Hotline: <a href="@lst.FirstOrDefault().conta.FirstOrDefault().Hotline">@lst.FirstOrDefault().conta.FirstOrDefault().Hotline</a></p>
+                        </div>
+                        <div class="footer-social-bookmark">
+                            <ul>
+                                <li><a href="https://www.facebook.com/thunderduck.brandsmaker.5"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="termofuse.html">Điều khoản sử dụng</a></li>
+                            <li><a href="privacy-policy.html">Chính sách bảo mật</a></li>
+                            <li><a href="#">Sơ đồ Website</a></li>
+                            <li><a href="#">Liên Hệ</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="footer-copyright">
+                        <p>&copy; 2018 <a href="#">Thunder Duck</a> All Right Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOER AREA END-->
+    <!--====== SCRIPTS JS ======-->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'vi', includedLanguages: 'en,vi,es,jv,ko,pa,pt,ru,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/index.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/vendor/bootstrap.min.js"></script>
+
+    <!--====== PLUGINS JS ======-->
+    <script src="~/Content/ThunderDuckConstruction/js/vendor/jquery.easing.1.3.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/jquery.pogo-slider.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/owl.carousel.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/stellar.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/jquery.mixitup.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/instafeed.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/datepicker.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/timepicker.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/wow.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/typed.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/ThunderDuckConstruction/js/jquery.sticky.js"></script>
+
+    <!--===== ACTIVE JS=====-->
+    <script src="~/Content/ThunderDuckConstruction/js/main.js"></script>
+    <script type="text/javascript">
+        $('.player').mb_YTPlayer();
+    </script>
+</body>
+</html>

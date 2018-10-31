@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/ThunderDuckConstruction/_LayoutWebmaster.cshtml";
+}
+
+<div class="main-wrapper">
+    <div class="container">
+
+        <!-- Start breadcrumb section  -->
+        <div class="row">
+            <div class="col-lg-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/webmasterconstruction/index">Trang chủ</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Thêm mới</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Start form -->
+        <div class="form-area">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single-form">
+                        <div class="section-head">
+                            <div class="title">
+                                <h4>Thêm mới </h4>
+                            </div>
+                        </div>
+                        <form action="/memberconstructionmaster/create" method="post" enctype="multipart/form-data">
+                            <fieldset>
+                                <div class="form-group">
+                                    <label>Tên thành viên (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" id="tentv" name="tentv" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Chức vụ (VUI LÒNG NHẬP DƯỚI 150 KÍ TỰ)</label>
+                                    <input maxlength="150" type="text" id="chucvu" name="chucvu" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Giới thiệu (VUI LÒNG NHẬP DƯỚI 200 KÍ TỰ)</label>
+                                    <input maxlength="200" type="text" id="gthieu" name="gthieu" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group">
+                                    <label>Hình ảnh (VUI LÒNG THÊM HÌNH VỚI KÍCH CỠ 210x250)</label><br />
+                                    <input type="file" name="ava" accept="image/*" multiple="multiple" />
+                                </div>
+                                <button type="submit" class="btn btn-primary mt-4 pl-4 pr-4">Thêm mới</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
