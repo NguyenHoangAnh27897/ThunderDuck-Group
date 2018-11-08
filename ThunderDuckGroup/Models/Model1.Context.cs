@@ -41,5 +41,7 @@ namespace ThunderDuckGroup.Models
         public virtual DbSet<Td_Construction_New> Td_Construction_New { get; set; }
         public virtual DbSet<Td_Construction_Slider> Td_Construction_Slider { get; set; }
         public virtual DbSet<Td_Constrution_Story> Td_Constrution_Story { get; set; }
+        public virtual DbSet<Td_BrandMaker_Account> Td_BrandMaker_Account { get; set; }
+        public virtual DbSet<Td_Construction_Account> Td_Construction_Account { get; set; }
     }
 }

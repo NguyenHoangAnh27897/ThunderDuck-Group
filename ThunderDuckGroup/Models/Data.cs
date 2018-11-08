@@ -17,6 +17,7 @@ namespace ThunderDuckGroup.Models
         public List<Td_BrandMaker_Members> mem { get; set; }
         public IQueryable<Td_BrandMaker_Contact> con { get; set; }
         public List<Td_BrandMaker_AreaType> evetype { get; set; }
+		public IQueryable<Td_BrandMaker_Account> acc { get; set; }
     }
 
     public class Event
@@ -56,5 +57,6 @@ namespace ThunderDuckGroup.Models
         public List<Td_Construction_Images> ima { get; set; }
         public List<Td_Construction_Member> meme { get; set; }
         public List<Td_Construction_New> news { get; set; }
-    }
+		public IQueryable<Td_Construction_Account> acc { get; set; }
+	}
 }

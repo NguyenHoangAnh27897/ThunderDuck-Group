@@ -1,5 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ThunderDuckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Td_BrandMaker_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Td_BrandMaker_AreaType">
     <Key>
       <PropertyRef Name="id" />
@@ -95,6 +103,14 @@
     <Property Name="Images" Type="nvarchar" MaxLength="50" />
     <Property Name="Amount" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Td_Construction_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="Td_Construction_Construction">
     <Key>
       <PropertyRef Name="id" />
@@ -176,6 +192,7 @@
     <Property Name="Description1" Type="nvarchar" MaxLength="500" />
   </EntityType>
   <EntityContainer Name="ThunderDuckModelStoreContainer">
+    <EntitySet Name="Td_BrandMaker_Account" EntityType="Self.Td_BrandMaker_Account" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_BrandMaker_AreaType" EntityType="Self.Td_BrandMaker_AreaType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_BrandMaker_Contact" EntityType="Self.Td_BrandMaker_Contact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_BrandMaker_Events" EntityType="Self.Td_BrandMaker_Events" Schema="dbo" store:Type="Tables" />
@@ -185,6 +202,7 @@
     <EntitySet Name="Td_BrandMaker_Slider" EntityType="Self.Td_BrandMaker_Slider" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_BrandMaker_Story" EntityType="Self.Td_BrandMaker_Story" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_BrandMaker_Tours" EntityType="Self.Td_BrandMaker_Tours" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Td_Construction_Account" EntityType="Self.Td_Construction_Account" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_Construction_Construction" EntityType="Self.Td_Construction_Construction" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_Construction_Contact" EntityType="Self.Td_Construction_Contact" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Td_Construction_Images" EntityType="Self.Td_Construction_Images" Schema="dbo" store:Type="Tables" />

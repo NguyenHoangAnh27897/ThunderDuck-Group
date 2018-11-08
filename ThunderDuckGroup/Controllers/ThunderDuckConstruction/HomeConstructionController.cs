@@ -22,6 +22,7 @@ namespace ThunderDuckGroup.Controllers.ThunderDuckConstruction
             var contact = db.Td_Construction_Contact.Where(st => st.id == 1);
             var slide = db.Td_Construction_Slider.Where(st => st.id == 1);
             var mems = db.Td_Construction_Member.ToList();
+			var account = db.Td_Construction_Account.Where(st => st.id == 1);
             home.stor = story;
             home.conta = contact;
             home.constr = construc;
@@ -30,6 +31,7 @@ namespace ThunderDuckGroup.Controllers.ThunderDuckConstruction
             home.conta = contact;
             home.slie = slide;
             home.meme = mems;
+			home.acc = account;
             lst.Add(home);
             return View(lst);
         }

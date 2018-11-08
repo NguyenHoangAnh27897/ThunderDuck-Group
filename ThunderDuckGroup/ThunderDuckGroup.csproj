@@ -165,6 +165,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ThunderDuckBrandMaker\BrandMakerWebmaster\EventBrandMakerController.cs" />
+    <Compile Include="Controllers\Webmaster\BrandMakerWebmaster\AccountBrandMakerController.cs" />
+    <Compile Include="Controllers\Webmaster\ConstructionWebmaster\AccountConstructionController.cs" />
     <Compile Include="Controllers\Webmaster\ConstructionWebmaster\ConsConstructionMasterController.cs" />
     <Compile Include="Controllers\Webmaster\ConstructionWebmaster\ImageConstructionMasterController.cs" />
     <Compile Include="Controllers\Webmaster\ConstructionWebmaster\MemberConstructionMasterController.cs" />
@@ -204,6 +206,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Td_BrandMaker_Account.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Td_BrandMaker_AreaType.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -229,6 +234,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Td_BrandMaker_Tours.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Td_Construction_Account.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Td_Construction_Construction.cs">
@@ -1059,7 +1067,6 @@
     <Content Include="Views\HomePageConstruction\Edit.cshtml" />
     <Content Include="Views\Shared\ThunderDuckConstruction\_LayoutWebmaster.cshtml" />
     <Content Include="Views\WebmasterConstruction\Index.cshtml" />
-    <Content Include="Views\WebmasterConstruction\Login.cshtml" />
     <Content Include="Views\ContactConstruction\Edit.cshtml" />
     <Content Include="Views\StoryConstruction\Edit.cshtml" />
     <Content Include="Views\ConsConstructionMaster\List.cshtml" />
@@ -1087,6 +1094,9 @@
     <Content Include="Views\HomeBrandMaker\NewDetail.cshtml" />
     <Content Include="Views\HomeBrandMaker\ProfileDetail.cshtml" />
     <Content Include="Views\HomeBrandMaker\EventDetail.cshtml" />
+    <Content Include="Views\AccountBrandMaker\Edit.cshtml" />
+    <Content Include="Views\AccountConstruction\Edit.cshtml" />
+    <Content Include="Views\WebmasterConstruction\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

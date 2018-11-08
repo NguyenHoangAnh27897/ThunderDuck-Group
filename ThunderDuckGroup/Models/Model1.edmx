@@ -4,7 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ThunderDuckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ThunderDuckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Td_BrandMaker_Account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Td_BrandMaker_AreaType">
           <Key>
             <PropertyRef Name="id" />
@@ -100,6 +108,14 @@
           <Property Name="Images" Type="nvarchar" MaxLength="50" />
           <Property Name="Amount" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="Td_Construction_Account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="Td_Construction_Construction">
           <Key>
             <PropertyRef Name="id" />
@@ -181,6 +197,7 @@
           <Property Name="Description1" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="ThunderDuckModelStoreContainer">
+          <EntitySet Name="Td_BrandMaker_Account" EntityType="Self.Td_BrandMaker_Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_BrandMaker_AreaType" EntityType="Self.Td_BrandMaker_AreaType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_BrandMaker_Contact" EntityType="Self.Td_BrandMaker_Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_BrandMaker_Events" EntityType="Self.Td_BrandMaker_Events" Schema="dbo" store:Type="Tables" />
@@ -190,6 +207,7 @@
           <EntitySet Name="Td_BrandMaker_Slider" EntityType="Self.Td_BrandMaker_Slider" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_BrandMaker_Story" EntityType="Self.Td_BrandMaker_Story" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_BrandMaker_Tours" EntityType="Self.Td_BrandMaker_Tours" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Td_Construction_Account" EntityType="Self.Td_Construction_Account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_Construction_Construction" EntityType="Self.Td_Construction_Construction" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_Construction_Contact" EntityType="Self.Td_Construction_Contact" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_Construction_Images" EntityType="Self.Td_Construction_Images" Schema="dbo" store:Type="Tables" />
@@ -198,8 +216,7 @@
           <EntitySet Name="Td_Construction_Slider" EntityType="Self.Td_Construction_Slider" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Td_Constrution_Story" EntityType="Self.Td_Constrution_Story" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ThunderDuckModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -395,7 +412,25 @@
           <EntitySet Name="Td_Construction_New" EntityType="Self.Td_Construction_New" />
           <EntitySet Name="Td_Construction_Slider" EntityType="Self.Td_Construction_Slider" />
           <EntitySet Name="Td_Constrution_Story" EntityType="Self.Td_Constrution_Story" />
+          <EntitySet Name="Td_BrandMaker_Account" EntityType="ThunderDuckModel.Td_BrandMaker_Account" />
+          <EntitySet Name="Td_Construction_Account" EntityType="ThunderDuckModel.Td_Construction_Account" />
         </EntityContainer>
+        <EntityType Name="Td_BrandMaker_Account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Td_Construction_Account">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -590,6 +625,24 @@
                 <ScalarProperty Name="Signature" ColumnName="Signature" />
                 <ScalarProperty Name="Images" ColumnName="Images" />
                 <ScalarProperty Name="Description1" ColumnName="Description1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Td_BrandMaker_Account">
+            <EntityTypeMapping TypeName="ThunderDuckModel.Td_BrandMaker_Account">
+              <MappingFragment StoreEntitySet="Td_BrandMaker_Account">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Td_Construction_Account">
+            <EntityTypeMapping TypeName="ThunderDuckModel.Td_Construction_Account">
+              <MappingFragment StoreEntitySet="Td_Construction_Account">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

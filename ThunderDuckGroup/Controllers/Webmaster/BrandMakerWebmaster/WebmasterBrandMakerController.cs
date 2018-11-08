@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ThunderDuckGroup.Models;
 
 namespace ThunderDuckGroup.Controllers.Webmaster.BrandMakerWebmaster
 {
     public class WebmasterBrandMakerController : Controller
     {
+		ThunderDuckEntities3 db = new ThunderDuckEntities3();
         // GET: WebmasterBrandMaker
         public ActionResult Index()
         {
@@ -29,24 +31,25 @@ namespace ThunderDuckGroup.Controllers.Webmaster.BrandMakerWebmaster
         [HttpPost]
         public ActionResult Login(string Username, string Password)
         {
-            if (Username.Equals("admin"))
-            {
-                if (Password.Equals("thunderduckgroup"))
-                {
-                    Session["Authentication"] = true;
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    return RedirectToAction("Login", "Webmaster");
-                }
-            }
-            else
-            {
-                return RedirectToAction("Login", "Webmaster");
-            }
+			if (Username.Equals("admin"))
+			{
+				var rs = db.Td_BrandMaker_Account.Find(1);
+				if (rs.Password.Equals(Password))
+				{
+					Session["Authentication"] = true;
+					return RedirectToAction("Index");
+				}
+				else
+				{
+					return RedirectToAction("Login", "WebmasterBrandMaker");
+				}
+			}
+			else
+			{
+				return RedirectToAction("Login", "WebmasterBrandMaker");
+			}
 
-        }
+		}
 
         [HttpPost]
         public ActionResult Logout()

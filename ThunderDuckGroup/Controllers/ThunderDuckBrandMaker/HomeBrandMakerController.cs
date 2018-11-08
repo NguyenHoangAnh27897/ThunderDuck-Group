@@ -23,6 +23,7 @@ namespace ThunderDuckGroup.Controllers.ThunderDuckBrandMaker
             var contact = db.Td_BrandMaker_Contact.Where(st => st.id == 1);
             var slide = db.Td_BrandMaker_Slider.Where(st => st.id == 1);
             var mems = db.Td_BrandMaker_Members.ToList();
+			var account = db.Td_BrandMaker_Account.Where(st => st.id == 1);
             home.sto = story;
             home.tou = tour;
             home.eve = events;
@@ -32,6 +33,7 @@ namespace ThunderDuckGroup.Controllers.ThunderDuckBrandMaker
             home.con = contact;
             home.sli = slide;
             home.mem = mems;
+			home.acc = account;
             lst.Add(home);
             return View(lst);
         }

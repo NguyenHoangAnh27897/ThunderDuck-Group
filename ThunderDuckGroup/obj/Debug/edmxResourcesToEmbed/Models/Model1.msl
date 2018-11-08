@@ -192,5 +192,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Td_BrandMaker_Account">
+      <EntityTypeMapping TypeName="ThunderDuckModel.Td_BrandMaker_Account">
+        <MappingFragment StoreEntitySet="Td_BrandMaker_Account">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Td_Construction_Account">
+      <EntityTypeMapping TypeName="ThunderDuckModel.Td_Construction_Account">
+        <MappingFragment StoreEntitySet="Td_Construction_Account">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

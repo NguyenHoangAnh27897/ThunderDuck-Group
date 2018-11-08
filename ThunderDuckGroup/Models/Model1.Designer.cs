@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'G:\New folder\ThunderDuck\ThunderDuckGroup\ThunderDuckGroup\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Yuu2412\Downloads\Microsoft.SkypeApp_kzf8qxf38zg5c!App\All\ThunderDuck-Group\ThunderDuckGroup\Models\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

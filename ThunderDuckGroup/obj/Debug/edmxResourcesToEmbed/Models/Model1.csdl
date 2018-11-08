@@ -192,5 +192,23 @@
     <EntitySet Name="Td_Construction_New" EntityType="Self.Td_Construction_New" />
     <EntitySet Name="Td_Construction_Slider" EntityType="Self.Td_Construction_Slider" />
     <EntitySet Name="Td_Constrution_Story" EntityType="Self.Td_Constrution_Story" />
+    <EntitySet Name="Td_BrandMaker_Account" EntityType="ThunderDuckModel.Td_BrandMaker_Account" />
+    <EntitySet Name="Td_Construction_Account" EntityType="ThunderDuckModel.Td_Construction_Account" />
   </EntityContainer>
+  <EntityType Name="Td_BrandMaker_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Td_Construction_Account">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
